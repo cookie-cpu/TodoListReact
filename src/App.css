@@ -1,4 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgray;
+}
+
 .App {
+  
+  
+  display: flex;
+  justify-content: space-evenly;
   text-align: center;
   font-size: 2.5em;
+}
+Header{
+ display: flex;
+ justify-content: space-evenly;
+ font-size: 4rem
+}
+Form {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+.todo-input{
+  width: 75%;
+}
+
+
+form input{
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+form button {
+  background-color:darkgrey;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  width: 5%;
+}
+form button:hover{
+  background-color:royalblue
 }
