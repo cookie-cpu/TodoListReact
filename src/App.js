@@ -22,7 +22,7 @@ function App() {
               inputText={inputText}
         />
 
-        <TodoList/>
+        <TodoList todos={todos}/>
       </div>
     
   </>);
