@@ -1,16 +1,26 @@
 import React from 'react'
 
-export default function Form() {
+export default function Form({ setInputText, todos, setTodos, inputText}) {
 
   const inputTextHandler = (e) => {
-    console.log(e.target.value)
+    //console.log(e.target.value)
+    setInputText(e.target.value)
+  }
+  const submitTodoHandler = (e) => {
+    //prevents page reload on submit
+    e.preventDefault()
+
+    setTodos([
+      ...todos, {text: inputText, completed: false, id: inputText},
+    ]);
+    setInputText("");
   }
 
   return (
     
     <form>
-      <input onChange={inputTextHandler} type='text' className='todo-input'/>
-      <button className='todo-btn' type='submit'>
+      <input value={inputText} onChange={inputTextHandler} type='text' className='todo-input'/>
+      <button onClick={submitTodoHandler} className='todo-btn' type='submit'>
         <i className='add-button'></i>
       </button>
       <div className='select'>
