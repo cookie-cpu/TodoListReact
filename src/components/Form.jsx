@@ -1,10 +1,15 @@
 import React from 'react'
 
 export default function Form() {
+
+  const inputTextHandler = (e) => {
+    console.log(e.target.value)
+  }
+
   return (
     
     <form>
-      <input type='text' className='todo-input'/>
+      <input onChange={inputTextHandler} type='text' className='todo-input'/>
       <button className='todo-btn' type='submit'>
         <i className='add-button'></i>
       </button>
