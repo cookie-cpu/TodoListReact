@@ -1,13 +1,13 @@
 import React from 'react'
 import Todo from './Todo'
 
-export default function TodoList({todos, setTodos,}) {
+export default function TodoList({todos, setTodos, filteredTodos}) {
 
   return (
     <div className="todo-container">
       <ul className="todo-list">
 
-      { Object.values(todos).map((todo) => (
+      { Object.values(filteredTodos).map((todo) => (
 
         <Todo 
           text={todo.text} 

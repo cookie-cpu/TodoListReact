@@ -17,37 +17,41 @@ function App() {
   //Use Effect
   useEffect(()=>{
     console.log('useEffect rerender')
-    filterHandler();
-  }, [todos, status])
-
-  //Events
-  const filterHandler = () => {
+    const filterHandler = () => {
     switch(status){
       case 'completed':
         setFilteredTodos(todos.filter(todo => todo.completed === true));
         break;
       case 'uncompleted':
-        setFilteredTodos(todos.filter(todo => todo.completed === true));
+        setFilteredTodos(todos.filter(todo => todo.completed === false));
         break;
       default:
         setFilteredTodos(todos)
         break;
     }
   }
-
+    filterHandler();
+  }, [todos, status])
 
   return (<>
     <header>Todo List</header>
       <div className="App">
 
-        <Form setInputText={setInputText} 
-              todos={todos} 
-              setTodos={setTodos}
-              inputText={inputText}
-              setStatus={setStatus}
+        <Form 
+            setInputText={setInputText} 
+            todos={todos} 
+            setTodos={setTodos}
+            inputText={inputText}
+            setStatus={setStatus}
+            
         />
 
-        <TodoList todos={todos} setTodos={setTodos}/>
+        <TodoList 
+          todos={todos} 
+          setTodos={setTodos}
+          filteredTodos={filteredTodos}
+        />
+
       </div>
     
   </>);
