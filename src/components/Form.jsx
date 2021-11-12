@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-export default function Form({ setInputText, todos, setTodos, inputText}) {
+export default function Form({ setInputText, todos, setTodos, inputText, setStatus}) {
 
   const inputTextHandler = (e) => {
     //console.log(e.target.value)
@@ -19,6 +19,9 @@ export default function Form({ setInputText, todos, setTodos, inputText}) {
     // resets text field to empty string
     setInputText("");
   }
+  const statusHandler = (e) => {
+    setStatus(e.target.value)
+  }
 
   return (
     
@@ -30,10 +33,10 @@ export default function Form({ setInputText, todos, setTodos, inputText}) {
         </button>
 
         <div className='select'>
-          <select name='todos' className='filter-todos'>
+          <select onChange={statusHandler} name='todos' className='filter-todos'>
             <option value='all'>All</option>
             <option value='completed'>Completed</option>
-            <option value='uncompleted'>Failed</option>
+            <option value='uncompleted'>Uncompleted</option>
           </select>
         </div>
 

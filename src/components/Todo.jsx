@@ -20,6 +20,7 @@ export default function Todo({ text, todos, setTodos, todo }) {
 
   return (
     <div className='todo'>
+    {/* adds a complete flag to alter the css if the task is completed */}
       <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>
 
         <button className='complete-btn' onClick={completeHandler}>
