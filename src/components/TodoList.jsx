@@ -6,11 +6,11 @@ export default function TodoList({todos}) {
   return (
     <div className="todo-container">
       <ul className="todo-list">
-        
-        <Todo/>
-        <Todo/>
-        <Todo/>
-        <Todo/>
+
+      { Object.values(todos).map((todo) => (
+        <Todo text={todo.text} key={todo.key}/>
+      ))
+      }
 
       </ul>
     </div>

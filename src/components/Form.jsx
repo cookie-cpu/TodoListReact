@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import _ from 'lodash';
 
 export default function Form({ setInputText, todos, setTodos, inputText}) {
 
@@ -10,9 +11,12 @@ export default function Form({ setInputText, todos, setTodos, inputText}) {
     //prevents page reload on submit
     e.preventDefault()
 
+    //spreads the current todos and adds a new todo object to the array
     setTodos([
-      ...todos, {text: inputText, completed: false, id: inputText},
+      ...todos, {text: inputText, completed: false, key: _.uniqueId("")},
     ]);
+
+    // resets text field to empty string
     setInputText("");
   }
 
