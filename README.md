@@ -1,7 +1,12 @@
 # openssl legacy start tag
 --openssl-legacy-provider
-``` "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",```
+
+```
+
+ "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+
+```
 ### flag may be needed on different dev environments
 
 
