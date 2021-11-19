@@ -6,7 +6,7 @@ import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 
-function App() {
+function TodoApp() {
 
   //States and Hooks
   const [inputText, setInputText] = useState("");
@@ -57,4 +57,4 @@ function App() {
   </>);
 }
 
-export default App;
+export default TodoApp;
