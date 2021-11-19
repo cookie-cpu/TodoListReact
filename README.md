@@ -1,3 +1,10 @@
+# openssl legacy start tag
+--openssl-legacy-provider
+``` "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",```
+### flag may be needed on different dev environments
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
