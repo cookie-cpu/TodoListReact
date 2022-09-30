@@ -23,11 +23,11 @@ export default function Todo({ text, todos, setTodos, todo }) {
     {/* adds a complete flag to alter the css if the task is completed */}
       <li className={`todo-item ${todo.completed ? "completed" : ''}`}>{text}</li>
 
-        <button className='complete-btn' onClick={completeHandler}>
+        <button className='complete-btn' onClick={completeHandler}>✓
           <i className='fas fa-check'></i>
       </button>
 
-      <button className='trash-btn' onClick={deleteHandler}>
+      <button className='trash-btn' onClick={deleteHandler}>🗑
         <i className='fas fa-trash'></i>
       </button>
 
